@@ -1,0 +1,34 @@
+<body>
+<div id="container">
+<div id="main">
+<%- include("header"); -%>
+
+<% let about=""; %>
+<% let news=""; %>
+<% let gallery=""; %>
+<% let donate=""; %>
+<% let branches=""; %>
+
+<ul class="topnav">
+  <li><a class="<%= branches %>" href="/branches">Our Branches</a></li>
+  <li><a class="<%= donate %>" href="/donate">Donate</a></li>
+  <li><a class="<%= gallery %>" href="/gallery">Gallery</a></li>
+  <li><a class="<%= news %>" href="/news">News</a></li>
+  <li><a class="<%= about %>" href="/about">About</a></li>
+  <li><a class="<%= home %>" href="/">Home</a></li>
+</ul>
+
+<div class="h-content">
+  <p>We are Care4Nation</p>
+</div>
+<p class="tagline">-"Don’t wait for change,Be the change"</p>
+
+<div class="image-h">
+  <img src="/images/1.jpg">
+</div>
+
+<div class="h-desc">
+  <p>"Care4Nation has reached out to 200,000+ families with dry ration and hygiene kits, meeting the urgent needs of 1 million+ people on the ground in 12 states including its 8 sponsorship states – Bihar, Delhi, Jharkhand, Odisha, Rajasthan, Telangana, Uttar Pradesh, and Uttarakhand covering 29 districts. To ensure learning does not stop for girls’ during the pandemic, Care4Nation is distributing 35000+ education kits. Each kit contains textbooks and reference books as per the girls’ grade, notebooks, pen and pencil."</p>
+</div>
+
+<%- include("footer"); -%>

@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/gallery-style.css">
+<body>
+<div id="container">
+<div id="main">
+<%- include("header"); -%>
+
+<% let about=""; %>
+<% let news=""; %>
+<% let home=""; %>
+<% let donate=""; %>
+<% let branches=""; %>
+
+<ul class="topnav">
+  <li><a class="<%= branches %>" href="/branches">Our Branches</a></li>
+  <li><a class="<%= donate %>" href="/donate">Donate</a></li>
+  <li><a class="<%= gallery %>" href="/gallery">Gallery</a></li>
+  <li><a class="<%= news %>" href="/news">News</a></li>
+  <li><a class="<%= about %>" href="/about">About</a></li>
+  <li><a class="<%= home %>" href="/">Home</a></li>
+</ul>
+
+<div class="container-news">
+
+  <div class="card card-1">
+    <div class="card-image-1"></div>
+  </div>
+
+  <div class="card card-2">
+    <div class="card-image-2"></div>
+  </div>
+
+  <div class="card card-3">
+    <div class="card-image-3"></div>
+  </div>
+
+  <div class="card card-4">
+    <div class="card-image-4"></div>
+  </div>
+
+</div>
+
+<%- include("footer"); -%>

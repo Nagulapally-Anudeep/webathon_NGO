@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/news-style.css">
+<body>
+<div id="container">
+<div id="main">
+<%- include("header"); -%>
+
+<% let about=""; %>
+<% let home=""; %>
+<% let gallery=""; %>
+<% let donate=""; %>
+<% let branches=""; %>
+
+<ul class="topnav">
+  <li><a class="<%= branches %>" href="/branches">Our Branches</a></li>
+  <li><a class="<%= donate %>" href="/donate">Donate</a></li>
+  <li><a class="<%= gallery %>" href="/gallery">Gallery</a></li>
+  <li><a class="<%= news %>" href="/news">News</a></li>
+  <li><a class="<%= about %>" href="/about">About</a></li>
+  <li><a class="<%= home %>" href="/">Home</a></li>
+</ul>
+
+<p class="heading-news">Highlights</p>
+
+<div class="container-news">
+
+  <div class="card-1">
+    <div class="card-image-1"></div>
+    <div class="card-text-1">
+      <span class="date-1">1 day ago</span>
+      <h2>Covid-19</h2>
+      <p>11 more deaths, 2,765 new cases reported in Andhra Pradesh</p>
+    </div>
+  </div>
+
+  <div class="card-2">
+    <div class="card-image-2"></div>
+    <div class="card-text-2">
+      <span class="date-2">4 days ago</span>
+      <h2>Coronavirus LIVE:</h2>
+      <p>Mumbai sees 9,327 new cases; nearly 7,000 in Karnataka</p>
+    </div>
+  </div>
+
+  <div class="card-3">
+    <div class="card-image-3"></div>
+    <div class="card-text-3">
+      <span class="date-3">3 days ago</span>
+      <h2>Coronavirus India Live Updates:</h2>
+      <p>Delhi govt bans political, sports gatherings; metro, buses to operate at 50%</p>
+    </div>
+  </div>
+
+</div>
+
+<%- include("footer"); -%>

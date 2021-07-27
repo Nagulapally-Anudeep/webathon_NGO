@@ -1,0 +1,84 @@
+<body>
+  <div id="container">
+    <div id="main">
+      <%- include("header"); -%>
+
+      <% let about=""; %>
+      <% let news=""; %>
+      <% let gallery=""; %>
+      <% let donate=""; %>
+      <% let home=""; %>
+
+      <ul class="topnav">
+        <li><a class="<%= branches %>" href="/branches">Our Branches</a></li>
+        <li><a class="<%= donate %>" href="/donate">Donate</a></li>
+        <li><a class="<%= gallery %>" href="/gallery">Gallery</a></li>
+        <li><a class="<%= news %>" href="/news">News</a></li>
+        <li><a class="<%= about %>" href="/about">About</a></li>
+        <li><a class="<%= home %>" href="/">Home</a></li>
+      </ul>
+
+      <div id="map"></div>
+
+      <script type="text/javascript">
+        //jshint esversion:6
+        function initMap() {
+          var locations = [{
+            lat: 15.828126,
+            lng: 78.037277
+          }, {
+            lat: 17.385044,
+            lng: 78.486671
+          }, {
+            lat: 28.704060,
+            lng: 77.102493
+          }, {
+            lat: 12.971599,
+            lng: 77.594566
+          }, {
+            lat: 20.296059,
+            lng: 85.824539
+          }, {
+            lat: 19.026808,
+            lng: 72.905440
+          }, {
+            lat: 36.152066,
+            lng: -115.133837
+          }, {
+            lat: -34.618745,
+            lng: -58.428673
+          }, {
+            lat: 48.760524,
+            lng: 2.460871
+          }, {
+            lat: 8.598398,
+            lng: 7.645333
+          }, {
+            lat: -33.943359,
+            lng: 151.275109
+          }];
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 2,
+            center: locations[0]
+          });
+
+          locations.forEach((location) => {
+             var marker = new google.maps.Marker({
+               position: location,
+               map: map
+             });
+          });
+
+
+        }
+
+        
+
+   </script>
+
+      
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=api_key%>&callback=initMap&libraries=&v=weekly"
+type="text/javascript"></script>
+
+<%- include("footer"); -%>

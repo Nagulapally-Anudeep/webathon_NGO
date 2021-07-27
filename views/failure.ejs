@@ -1,0 +1,29 @@
+<body>
+<div id="container">
+<div id="main">
+<%- include("header"); -%>
+
+<% let donate=""; %>
+<% let about=""; %>
+<% let news=""; %>
+<% let gallery=""; %>
+<% let home=""; %>
+<% let branches=""; %>
+
+<ul class="topnav">
+  <li><a class="<%= branches %>" href="/branches">Our Branches</a></li>
+  <li><a class="<%= donate %>" href="/donate">Donate</a></li>
+  <li><a class="<%= gallery %>" href="/gallery">Gallery</a></li>
+  <li><a class="<%= news %>" href="/news">News</a></li>
+  <li><a class="<%= about %>" href="/about">About</a></li>
+  <li><a class="<%= home %>" href="/">Home</a></li>
+</ul>
+
+<div class="respond-f">
+  <p> Some error has occured due to invalid user details/amount.</p>
+  <form class="click" action="/failure" method="post">
+    <button type="submit" name="button">Try again</button>
+  </form>
+</div>
+
+<%- include("footer"); -%>
